@@ -1,4 +1,5 @@
-<?php
+<?php // fungsinya untuk menyiapkan data pada table yang sudah kita buat.
+
     require_once('conn.php');
 
     $query = "SELECT * FROM makanan";
@@ -46,20 +47,22 @@
                             <th>Harga</th>
                             <th>Warung</th>
                             <th>Alamat Warung</th>
+                            <th>Pemilik Warung</th>
                             <td>Aksi</td>
                         </tr>
 
                         <?php $i =0; foreach($data as $d): ?>
                             <tr>
-                                <td><?= ++$i?></td>
-                                <td><?= $d['nama_makanan']?></td>
+                                <td class="text-center"><?= ++$i?></td>
+                                <td><?= $d['nama_makanan'];?></td>
                                 <td>Rp. <?= number_format($d['harga_makanan'],0,',','.');?></td>
-                                <td><?= $d['warung']?></td>
-                                <td><?= $d['alamat']?></td>
+                                <td><?= $d['warung'];?></td>
+                                <td><?= $d['alamat'];?></td>
+                                <td><?= $d["pemilik_warung"]; ?></td>
                                 <td class="text-center">
                                     <a href="detail.php?id=<?= $d['id_makanan'] ?>" class="btn btn-success"> <i class="bi bi-eye-fill"></i> </a>
-                                    <a href="ubah.php" class="btn btn-success"> <i class="bi bi-pencil-fill"></i> </a>
-                                    <a href="hapus.php" class="btn btn-danger"> <i class="bi bi-trash-fill"></i> </a>
+                                    <a href="ubah.php?id=<?= $d['id_makanan'] ?>" class="btn btn-success"> <i class="bi bi-pencil-fill"></i> </a>
+                                    <a href="hapus.php?id=<?= $d['id_makanan'] ?>" class="btn btn-danger"> <i class="bi bi-trash-fill"></i> </a>
                                 </td>
                             </tr>
                         <?php endforeach?>
