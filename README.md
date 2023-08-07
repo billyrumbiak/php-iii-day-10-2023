@@ -21,3 +21,33 @@ Menampilkan Data Dari Database
 ## Query menghapus
 
     DELETE FROM `makanan` WHERE 0
+
+## Tampilan CRUD
+
+### Tabel Data Makanan
+
+<img src="assest/1.jpg">
+
+### Fungsi Tambah Data Makanan
+
+<img src="assest/2.jpg">
+
+### Berhasil Tambah Data Makanan
+
+<img src="assest/3.jpg">
+
+### Detail Data Makanan
+
+<img src="assest/4.jpg">
+
+### Edit Data Makanan
+
+<img src="assest/5.jpg">
+
+### Berhasil Edit Data Makanan
+
+<img src="assest/6.jpg">
+
+### Berhasil Hapus Data Makanan
+
+<img src="assest/7.jpg">
