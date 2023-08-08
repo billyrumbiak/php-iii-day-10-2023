@@ -35,7 +35,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                    <a href="tambah.php" class="btn btn-success"> <i class="bi bi-plus-square"></i> Tambah Makanan</a>
+                    <a href="tambah.php" class="btn btn-success my-3 fs-5"> <i class="bi bi-plus-square"></i> Tambah Makanan</a>
 
                 <div class="table-responsive mt-3">
 

@@ -15,55 +15,52 @@
 </head>
 <body class="bg-dark text-light">
     
-        <div class="row text-center">
-            <div class="col-12 p-5">
-                <p class="h4"> Tambah Data Makanan Papua <i class="bi bi-cart2"></i></p>
-            </div>
+    
+    <div class="row text-center">
+        <div class="col-12 p-5">
+            <p class="h4"> Tambah Data Makanan Papua <i class="bi bi-bookmark-plus"></i></p>
         </div>
-
+    </div>
+    
+    
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                    <a href="index.php" class="btn btn-success"> <i class="bi bi-plus-square"></i>Beranda</a>
+            <div class="col-8">
+                
+                <a href="index.php" class="btn btn-success my-3 fs-5"><i class="bi bi-house pe-1"></i></i>Beranda</a>
 
-                <div class="table-responsive mt-3">
+                <div class="form-floating">
+
+                    <!-- action berfungsi untuk mengirimkan data ke suatu link -->
+                    <form action="aksiTambah.php" method="post" name="tambah">
+
+                        <ul class="list-group list-group-numbered">
+                            <li class="list-group-item py-3">
+                                <label for="nama_makanan" class="pb-2">Nama Makanan</label>
+                                <input type="text" name="nama_makanan" id="nama_makanan" class="form-control" required>
+                            </li>
+                            <li class="list-group-item py-3">
+                                <label for="harga_makanan" class="pb-2">Harga Makanan</label>
+                                <input type="text" name="harga_makanan" id="harga_makanan" class="form-control" required>
+                            </li>
+                            <li class="list-group-item py-3">
+                                <label for="warung" class="pb-2">Warung</label>
+                                <input type="text" name="warung" id="warung" class="form-control" required>
+                            </li>
+                            <li class="list-group-item py-3">
+                                <label for="alamat" class="pb-2">Alamat</label>
+                                <input type="text" name="alamat" id="alamat" class="form-control" required>
+                            </li>
+                            <li class="list-group-item py-3">
+                                <label for="pemilik_warung"class="pb-2">Pemilik Warung</label>
+                                <input type="text" name="pemilik_warung" id="pemilik_warung" class="form-control" required>
+                            </li>
+                        </ul>
+
+                        <button class="btn btn-success my-3 fs-5" type="submit" name="submit" value="Tambah"><i class="bi bi-bookmark-plus pe-1"></i>Tambah Data!</button>
 
 
-                    <table class="table table-bordered table-hover">
-                        <tr class="text-center bg-success">
-                            <!-- action berfungsi untuk mengirimkan data ke suatu link -->
-                            <form action="aksiTambah.php" method="post" name="tambah">
-
-                                <ul>
-                                    <li>
-                                        <label for="nama_makanan">Nama Makanan : </label>
-                                        <input type="text" name="nama_makanan" id="nama_makanan" required>
-                                    </li>
-                                    <li>
-                                        <label for="harga_makanan">Harga Makanan : </label>
-                                        <input type="text" name="harga_makanan" id="harga_makanan" required>
-                                    </li>
-                                    <li>
-                                        <label for="warung">Warung : </label>
-                                        <input type="text" name="warung" id="warung" required>
-                                    </li>
-                                    <li>
-                                        <label for="alamat">Alamat : </label>
-                                        <input type="text" name="alamat" id="alamat" required>
-                                    </li>
-                                    <li>
-                                        <label for="pemilik_warung">Pemilik Warung : </label>
-                                        <input type="text" name="pemilik_warung" id="pemilik_warung" required>
-                                    </li>
-                                    <li>
-                                        <button type="submit" name="submit" value="Tambah">Tambah Data!</button>
-                                    </li>
-                                </ul>
-
-                            </form>
-                        </tr>
-
-                    </table>
+                    </form>
 
                 </div>
             </div>

@@ -49,7 +49,7 @@ require_once('conn.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data Makanan</title>
+    <title>Ubah Data Makanan</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -63,55 +63,47 @@ require_once('conn.php');
     
         <div class="row text-center">
             <div class="col-12 p-5">
-                <p class="h4"> Ubah Data Makanan Papua <i class="bi bi-cart2"></i></p>
+                <p class="h4"> Ubah Data Makanan Papua <i class="bi bi-pencil-square"></i> </p>
             </div>
         </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                    <a href="index.php" class="btn btn-success"> <i class="bi bi-plus-square"></i>Beranda</a>
+            <div class="col-8">
+                    <a href="index.php" class="btn btn-success my-3 fs-5"><i class="bi bi-house pe-1"></i></i>Beranda</a>
 
-                <div class="table-responsive mt-3">
+                <div class="form-floating">
 
-
-                    <table class="table table-bordered table-hover">
-                        <tr class="text-center bg-success">
                             <!-- action berfungsi untuk mengirimkan data ke suatu link -->
                             <form action="aksiEdit.php" method="post" name="edit">
 
-                            <input type="text" name="id_makanan" value="<?= $result  ["id_makanan"]; ?>">
+                            <input type="hidden" name="id_makanan" value="<?= $result  ["id_makanan"]; ?>" class="form-control">
 
-                                <ul>
-                                    <li>
-                                        <label for="nama_makanan">Nama Makanan : </label>
-                                        <input type="text" name="nama_makanan" id="nama_makanan" required value="<?= $result  ["nama_makanan"]; ?> ">
+                                <ul class="list-group list-group-numbered">
+                                    <li class="list-group-item py-3">
+                                        <label for="nama_makanan" class="pb-2">Nama Makanan</label>
+                                        <input type="text" name="nama_makanan" id="nama_makanan" required value="<?= $result  ["nama_makanan"]; ?> " class="form-control">
                                     </li>
-                                    <li>
-                                        <label for="harga_makanan">Harga Makanan : </label>
-                                        <input type="text" name="harga_makanan" id="harga_makanan" required value="<?php echo $result ["harga_makanan"]; ?> ">
+                                    <li class="list-group-item py-3">
+                                        <label for="harga_makanan" class="pb-2">Harga Makanan</label>
+                                        <input type="text" name="harga_makanan" id="harga_makanan" required value="<?php echo $result ["harga_makanan"]; ?> " class="form-control">
                                     </li>
-                                    <li>
-                                        <label for="warung">Warung : </label>
-                                        <input type="text" name="warung" id="warung" required value="<?= $result ["warung"]; ?> ">
+                                    <li class="list-group-item py-3">
+                                        <label for="warung" class="pb-2">Warung</label>
+                                        <input type="text" name="warung" id="warung" required value="<?= $result ["warung"]; ?> " class="form-control">
                                     </li>
-                                    <li>
-                                        <label for="alamat">Alamat : </label>
-                                        <input type="text" name="alamat" id="alamat" required value="<?= $result ["alamat"] ?> ">
+                                    <li class="list-group-item">
+                                        <label for="alamat" class="pb-2">Alamat</label>
+                                        <input type="text" name="alamat" id="alamat" required value="<?= $result ["alamat"] ?> " class="form-control">
                                     </li>
-                                    <li>
-                                        <label for="pemilik_warung">Pemilik Warung : </label>
-                                        <input type="text" name="pemilik_warung" id="pemilik_warung" required value="<?= $result ["pemilik_warung"] ?>">
-                                    </li>
-                                    <li>
-                                        <button type="submit" name="submit" value="Edit">Ubah Data!</button>
+                                    <li class="list-group-item py-3">
+                                        <label for="pemilik_warung" class="pb-2">Pemilik Warung</label>
+                                        <input type="text" name="pemilik_warung" id="pemilik_warung" required value="<?= $result ["pemilik_warung"] ?>" class="form-control">
                                     </li>
                                 </ul>
-
+                                
+                                <button class="btn btn-success my-3 fs-5" type="submit" name="submit" value="Edit"><i class="bi bi-pencil-square pe-1"></i>Ubah Data!</button>
                             </form>
-                        </tr>
-
-                    </table>
 
                 </div>
             </div>
